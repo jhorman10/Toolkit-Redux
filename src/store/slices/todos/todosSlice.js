@@ -1,1 +1,15 @@
-export const todo = 'pan'
+import { createSlice } from '@reduxjs/toolkit';
+
+export const todoSlice = createSlice({
+    name: 'name',
+    initialState: {
+        counter: 10
+    },
+    reducers: {
+        increment2: (state, /* action */ ) => {
+            state.counter += 1;
+        },
+    }
+});
+
+export const { increment2 } = todoSlice.actions;
